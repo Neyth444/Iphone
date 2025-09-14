@@ -100,10 +100,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     radios.forEach(radio => {
         radio.addEventListener("change", () => {
-            // Affiche la notif
+
             notif.classList.add("show");
 
-            // Cache après 3s
             setTimeout(() => {
                 notif.classList.remove("show");
             }, 3000);
