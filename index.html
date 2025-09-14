@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="htrCuokPjj4HuUew5J7x2ajkxmQ6_wD1hpEo8iPS-hc" />
     <link rel="stylesheet" href="styles.css">
-    <title>iPhone 14 Pro Dynamic Island</title>
+    <title>iPhone 14 Pro Dynamic</title>
 </head>
 <body>
     
@@ -87,6 +87,31 @@
         <label for="space-black" class="swatch"></label>
         <label for="silver" class="swatch"></label>
     </div>
+<div class="notification" id="notification">
+    <h2>abonnez vous :)</h2>
+    <p><a href="https://www.instagram.com/rrthur_444/" target="_blank">https://www.instagram.com/rrthur_444/</a></p>
+</div>
+
+<!-- Script pour la notif d'abonnement -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const radios = document.querySelectorAll('input[name="theme"]');
+    const notif = document.getElementById("notification");
+
+    radios.forEach(radio => {
+        radio.addEventListener("change", () => {
+            // Affiche la notif
+            notif.classList.add("show");
+
+            // Cache après 3s
+            setTimeout(() => {
+                notif.classList.remove("show");
+            }, 3000);
+        });
+    });
+});
+</script>
+
 
 </body>
 </html>

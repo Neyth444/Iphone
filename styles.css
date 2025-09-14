@@ -361,14 +361,14 @@ body{
 }
 
 .content .text:before{
-    content: "MusicArtistName";
+    content: "Spotify";
     order: 1;
     text-transform: uppercase;
 }
 
 .content .text:after{
     order: 2;
-    content: "MusicName";
+    content: "Népal - 444 nuits";
     opacity: 0.5;
 }
 
@@ -417,7 +417,7 @@ body{
     content: "";
     height: 100%;
     background: white;
-    width: 25%;
+    width: 75%;
     position: absolute;
 }
 
@@ -636,6 +636,47 @@ input[type=radio]{
 #silver:checked~.pallette label[for=silver]{
     border-color: hsl(var(--silver), 50%, 75%);
 }
+
+.notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(20, 20, 20, 0.9);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    font-family: sans-serif;
+    z-index: 9999;
+    opacity: 0;              
+    pointer-events: none;    
+    transition: opacity 0.5s ease-in-out;
+}
+
+.notification.show {
+    opacity: 1;              
+    pointer-events: auto;
+}
+
+.notification h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+.notification a {
+    color: #4da6ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.notification a:hover {
+    text-decoration: underline;
+}
+
+
 
 @keyframes test{
     from{
